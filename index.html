@@ -188,8 +188,11 @@
   @media(max-width:860px){ .feat-grid{ grid-template-columns:1fr 1fr; } }
   @media(max-width:560px){ .feat-grid{ grid-template-columns:1fr; } }
   .card { background:transparent; border:1px solid #E2E2E7; border-radius:16px; padding:24px; }
-  .card .ic { width:40px; height:40px; border-radius:11px; display:grid; place-items:center;
-    background:var(--indigo-soft); color:var(--indigo-deep); margin-bottom:16px; }
+  .card .cardmedia { aspect-ratio:3/2; width:100%; border-radius:12px; overflow:hidden;
+    background:linear-gradient(135deg,#EEEEF3,#E5E5EE); display:grid; place-items:center;
+    color:var(--muted); margin-bottom:18px; }
+  .card .cardmedia svg { width:28px; height:28px; opacity:.5; }
+  .card .cardmedia img { width:100%; height:100%; object-fit:cover; display:block; }
   .card h3 { font-size:18px; font-weight:600; letter-spacing:-.02em; margin:0 0 7px; }
   .card p { color:var(--ink-2); font-size:15px; margin:0; }
 
@@ -338,32 +341,32 @@
       </div>
       <div class="feat-grid">
         <div class="card">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" /> <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" /></svg></div>
+          <div class="cardmedia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></div>
           <h3>Grab any video or file</h3>
           <p>Direct files, and streaming video split into hundreds of fragments - Swoop captures it and stitches it back into one clean file.</p>
         </div>
         <div class="card">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l3 0" /> <path d="M12 3l0 3" /> <path d="M7.8 7.8l-2.2 -2.2" /> <path d="M16.2 7.8l2.2 -2.2" /> <path d="M7.8 16.2l-2.2 2.2" /> <path d="M12 12l9 3l-4 2l-2 4l-3 -9" /></svg></div>
+          <div class="cardmedia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></div>
           <h3>One click from your browser</h3>
           <p>A Download button appears right on the video. Or right&#8209;click anything and choose <b>Send to Swoop</b>. Chrome, Edge, Brave.</p>
         </div>
         <div class="card">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /> <path d="M15 19l2 2l4 -4" /></svg></div>
+          <div class="cardmedia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></div>
           <h3>Plays on your Mac, guaranteed</h3>
           <p>Downloaded a VP9 or AV1 clip QuickTime chokes on? Swoop quietly converts only what your Mac can't play to H.264.</p>
         </div>
         <div class="card">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /> <path d="M4 9l16 0" /></svg></div>
+          <div class="cardmedia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></div>
           <h3>Lives in your menu bar</h3>
           <p>A tiny widget shows progress at a glance - that signature curve. Pause, resume, reveal in Finder, then it slips away.</p>
         </div>
         <div class="card">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18.364 19.364a9 9 0 1 0 -12.728 0" /> <path d="M15.536 16.536a5 5 0 1 0 -7.072 0" /> <path d="M11 13a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg></div>
+          <div class="cardmedia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></div>
           <h3>Built for streaming sites</h3>
           <p>Merges separate audio and video, retries fragments that drop, and picks the quality you set - up to the max the site offers.</p>
         </div>
         <div class="card">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" /></svg></div>
+          <div class="cardmedia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></div>
           <h3>Fast, native, quiet</h3>
           <p>A real Mac app - not a browser in disguise. Universal binary, light on memory, no telemetry, no sign&#8209;in.</p>
         </div>
