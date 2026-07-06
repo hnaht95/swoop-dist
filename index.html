@@ -173,12 +173,14 @@
     transition:transform .86s cubic-bezier(.42,0,.18,1) .14s, opacity .4s ease .16s; }
   .scene.zoom .wwrap { opacity:1; transform:translateX(0); }
   @media(prefers-reduced-motion:reduce){ .vframe,.cursor{ display:none!important; } .wwrap{ opacity:1!important; transform:none!important; } }
-  /* mobile: drop the desktop-only cursor/widget slide + video zoom; show a static, fitting video */
+  /* mobile: no desktop cursor/slide-over — stack the demo video and the real widget vertically,
+     both static, so the widget stays visible on phones instead of being hidden. */
   @media(max-width:900px){
-    .cursor, .wwrap { display:none; }
-    .scene { min-height:0; overflow:hidden; }
-    .vframe { position:relative; }
+    .cursor { display:none; }
+    .scene { flex-direction:column; align-items:center; min-height:0; overflow:visible; gap:26px; }
+    .vframe { position:relative; bottom:auto; }
     .scene.zoom .vframe { transform:none; opacity:1; }
+    .wwrap { display:block; opacity:1; transform:none; width:366px; max-width:100%; }
   }
 
   /* trust strip */
