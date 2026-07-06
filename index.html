@@ -45,12 +45,12 @@
   .nav-links { display:flex; align-items:center; gap:10px; }
   .npill { display:inline-flex; align-items:center; gap:7px; font-family:var(--sans);
     font-weight:600; font-size:14.5px; letter-spacing:-.01em; color:var(--ink); background:#fff;
-    padding:9px 16px; border-radius:999px; box-shadow:0 1px 2px rgba(20,20,40,.06), inset 0 0 0 1px rgba(20,20,40,.07);
-    transition:background .18s ease, box-shadow .18s ease, color .18s ease; }
+    padding:9px 16px; border-radius:999px;
+    transition:background .18s ease, color .18s ease; }
   .npill svg { width:17px; height:17px; }
-  .npill:hover { background:#F6F6F8; box-shadow:0 2px 7px rgba(20,20,40,.10), inset 0 0 0 1px rgba(20,20,40,.09); }
-  .sw a.npill-dl { background:#18181B; color:#fff; box-shadow:none; }
-  .sw a.npill-dl:hover { background:#000; color:#fff; box-shadow:0 6px 16px rgba(0,0,0,.20); }
+  .npill:hover { background:#F6F6F8; }
+  .sw a.npill-dl { background:#18181B; color:#fff; }
+  .sw a.npill-dl:hover { background:#000; color:#fff; }
   @media(max-width:720px){ .nav-links .npill:not(.npill-dl){ display:none; } }
 
   .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px;
