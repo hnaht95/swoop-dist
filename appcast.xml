@@ -3,6 +3,14 @@
     <channel>
         <title>Swoop</title>
         <item>
+            <title>0.1.2</title>
+            <pubDate>Mon, 06 Jul 2026 09:54:26 +0700</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://swoop.io.vn/Swoop.dmg" length="2880894" type="application/octet-stream" sparkle:edSignature="xR+103lRz6hZFOodSFadgjACknm3YDg5kVOSaf7KTb8LwwFk5cVIO7m8i8hErdlya9FvUkdfCCYcbhNjoSRQAQ=="/>
+        </item>
+        <item>
             <title>0.1.1</title>
             <pubDate>Mon, 06 Jul 2026 09:54:26 +0700</pubDate>
             <sparkle:version>2</sparkle:version>
