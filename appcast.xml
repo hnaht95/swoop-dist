@@ -3,28 +3,84 @@
     <channel>
         <title>Swoop</title>
         <item>
-            <title>0.1.2</title>
-            <pubDate>Mon, 06 Jul 2026 09:54:26 +0700</pubDate>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>0.1.2</sparkle:shortVersionString>
+            <title>0.1.85</title>
+            <pubDate>Fri, 02 Oct 2026 10:11:50 +0700</pubDate>
+            <sparkle:version>86</sparkle:version>
+            <sparkle:shortVersionString>0.1.85</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://swoop.io.vn/Swoop.dmg" length="2880894" type="application/octet-stream" sparkle:edSignature="xR+103lRz6hZFOodSFadgjACknm3YDg5kVOSaf7KTb8LwwFk5cVIO7m8i8hErdlya9FvUkdfCCYcbhNjoSRQAQ=="/>
-        </item>
-        <item>
-            <title>0.1.1</title>
-            <pubDate>Mon, 06 Jul 2026 09:54:26 +0700</pubDate>
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://swoop.io.vn/Swoop.dmg" length="2792012" type="application/octet-stream" sparkle:edSignature="MFbu1VKDKyKFfFEb55VkIvmeF27sLoJRHUdM7851JanVXzOIuuUiHpneJbqrfISVKyVFkV863I6lmX2uD/eHBQ=="/>
-        </item>
-        <item>
-            <title>0.1.0</title>
-            <pubDate>Mon, 06 Jul 2026 09:54:26 +0700</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/hnaht95/swoop-dist/releases/download/v0.1.0/Swoop.dmg" length="2690729" type="application/octet-stream" sparkle:edSignature="GwOoSP8d/bTI3Doc2Axm9Mo/KXGjTF+eXzoC1AiaR36kked9Ub0h2Mi/1ouMGX9vTxC+PX8YS81sEOKSxhjBAQ=="/>
+            <description><![CDATA[<h2>Có gì mới trong 0.1.85</h2>
+
+<p><b>Video YouTube không còn bị mờ sau khi chuyển sang H.265</b></p>
+
+<p>Khi máy Mac không phát được định dạng gốc (AV1, VP9), Swoop chuyển video sang H.265 để mở được bằng QuickTime. Bước chuyển này vốn nén quá tay: đo bằng VMAF so với bản gốc YouTube, video 4K chỉ đạt khoảng 94 điểm, đủ để thấy lớp chi tiết nhỏ bị làm mịn. Giờ chất lượng mã hoá được nâng lên, video đạt từ 96 tới 99 điểm, gần như không phân biệt được với bản gốc. Thời gian chuyển đổi không đổi, chỉ có file lớn hơn trước, từ bằng bản gốc tới khoảng gấp đôi.</p>
+
+<p>Video HDR giữ nguyên 10-bit thay vì bị ép xuống 8-bit. Short 1080p cũng không còn phải chuyển đổi nữa: Swoop từng coi chúng là "trên 1080p" vì so theo chiều cao, nay lấy thẳng bản H.264 cùng độ phân giải mà YouTube có sẵn.</p>
+
+<p><b>Video dọc tải đúng độ phân giải đã chọn</b></p>
+
+<p>Ở các mức 1080p, 720p và 480p, video dọc bị tải thấp hơn nhiều so với mức đã chọn: một Short ở mức 1080p chỉ ra 480x854, ở mức 720p ra 360x640. Lý do là Swoop so theo chiều cao, mà chiều cao của video dọc lại là cạnh dài. Giờ độ phân giải tính theo cạnh ngắn, nên Shorts, Reels và TikTok ra đúng mức bạn chọn.</p>
+
+<p><b>Video Facebook không còn ra file chỉ có tiếng</b></p>
+
+<p>Với một số video Facebook, Swoop không chọn được định dạng nào và phải chuyển sang tải luồng dự phòng. Luồng này có thể lại chính là luồng tiếng, vì Facebook gắn nhãn luồng tiếng giống hệt luồng hình. Giờ Swoop ghép hình với tiếng cho các video này, phân biệt đúng đâu là luồng tiếng, và khi video cần đăng nhập thì thử lại bằng phiên đăng nhập của trình duyệt trước khi phải dùng tới luồng dự phòng.</p>
+
+<p><b>Tên file tiếng Việt hiện đúng</b></p>
+
+<p>Tệp có dấu tải từ Google Drive về thành "QuÃ  táº·ng...", cả trên thẻ bắt link lẫn khi lưu ra đĩa. Nguyên nhân là chuỗi UTF-8 trong tiêu đề HTTP bị đọc theo bảng mã Latin-1. Nay tên hiện và lưu đúng, còn tên vốn dĩ dùng Latin-1 thì vẫn giữ nguyên.</p>
+
+<p><b>Widget không còn bị Dock che lúc đăng nhập</b></p>
+
+<p>Trên máy hai màn hình, Dock có thể xuất hiện vài giây sau khi widget đã neo vào góc, và widget nằm luôn dưới Dock cho tới khi có gì đó làm nó vẽ lại. Giờ widget tự neo lại mỗi khi Dock đến hoặc đi.</p>
+
+<p><b>App nói rõ nó vừa tự làm gì</b></p>
+
+<p>Hai việc Swoop tự quyết trước nay diễn ra trong im lặng. Khi đang chuyển đổi, widget ghi rõ "Đang chuyển sang H.265" kèm dòng "Để QuickTime mở được". File tải xong mang một dòng ghi chú: "Chuyển sang H.265 cho QuickTime", hoặc "Lấy theo trình duyệt vì YouTube chặn" khi YouTube từ chối và Swoop phải lấy luồng trình duyệt đang phát. Trước đây người dùng chỉ thấy hình mềm hơn mong đợi mà không có gì để lần ra lý do.</p>
+
+<p><b>Menu chuột phải đúng màu hệ thống</b></p>
+
+<p>Các dòng menu của Swoop tự vẽ chữ nên màu lệch so với dòng gốc của macOS ngay bên cạnh, lúc nhạt hơn lúc đậm hơn. Giờ chúng dựng bằng thành phần chuẩn của hệ thống nên màu khớp.</p>
+
+<p><b>Nhớ tải lại tiện ích trình duyệt</b></p>
+
+<p>Bản này có sửa tiện ích. Sau khi cập nhật app, bấm vào icon Swoop trên trình duyệt rồi bấm Tải lại. Không có bước này thì tiện ích vẫn chạy bản cũ.</p>
+
+<h2>What's new in 0.1.85</h2>
+
+<p><b>YouTube videos no longer go soft when converted to H.265</b></p>
+
+<p>When your Mac can't play a video's original format (AV1, VP9), Swoop converts it to H.265 so QuickTime can open it. That conversion was compressing too hard: scored with VMAF against the YouTube original, 4K video came out around 94, enough to see fine detail smoothed away. It now encodes at a higher quality and scores 96 to 99, practically indistinguishable from the source. Conversion takes exactly as long as before; the files are larger, from about the source's size up to roughly twice it.</p>
+
+<p>HDR video stays 10-bit instead of being cut to 8. And 1080p Shorts no longer need converting at all: Swoop used to treat them as "above 1080p" because it measured height, and now takes the H.264 version YouTube already serves at that size.</p>
+
+<p><b>Vertical videos download at the resolution you chose</b></p>
+
+<p>At 1080p, 720p and 480p, vertical videos came down far below the setting: a Short at 1080p arrived as 480x854, at 720p as 360x640. Swoop measured height, and a vertical video's height is its long side. Resolution is now judged on the short side, so Shorts, Reels and TikToks arrive at the size you picked.</p>
+
+<p><b>Facebook videos no longer come out sound-only</b></p>
+
+<p>For some Facebook videos Swoop found no format it would take and fell back to a raw stream — which could turn out to be the sound track, because Facebook labels its audio exactly like its video. Swoop now merges picture and sound for these videos, tells the two tracks apart, and retries a login-walled video with your browser's session before reaching for the fallback.</p>
+
+<p><b>Vietnamese filenames come through intact</b></p>
+
+<p>A file with accents downloaded from Google Drive arrived as "QuÃ  táº·ng…", on the capture card and on disk. The UTF-8 in the HTTP header was being read as Latin-1. Names now show and save correctly, and a name that really is Latin-1 is left alone.</p>
+
+<p><b>The Dock no longer covers the widget at login</b></p>
+
+<p>On a two-display Mac the Dock can arrive seconds after the widget has docked into its corner, leaving the widget underneath it until something else redrew it. The widget now re-docks whenever the Dock arrives or leaves.</p>
+
+<p><b>The app says what it just did on its own</b></p>
+
+<p>Two things Swoop decides for you used to happen in silence. While converting, the widget now says "Converting to H.265" over "So QuickTime can play it". A finished file carries a one-line note: "Converted to H.265 for QuickTime", or "Browser's quality - YouTube blocked" when YouTube turned Swoop away and it downloaded the stream your browser was playing. Until now you only saw a picture softer than you expected, with nothing to connect it to.</p>
+
+<p><b>The right-click menu matches the system's colours</b></p>
+
+<p>Swoop's own menu rows drew their text by hand, so their colour sat off from the macOS rows beside them, sometimes fainter and sometimes heavier. They are built from standard system pieces now, and match.</p>
+
+<p><b>Reload the browser extension</b></p>
+
+<p>This release changes the extension. After updating, click the Swoop icon in your browser and press Reload — without it the extension keeps running the old build.</p>
+]]></description>
+            <enclosure url="https://swoop.io.vn/Swoop-0.1.85.dmg" length="3867977" type="application/octet-stream" sparkle:edSignature="ATh+QpEyS6bVy+iio4Gj3tviMszapko2C/Kb/bdTSniDLEyQ+3m2bxwR7EKzIYIYIlHTazjbimUqE6kHUW5wAw=="/>
         </item>
     </channel>
 </rss>
